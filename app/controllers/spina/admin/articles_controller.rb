@@ -61,9 +61,9 @@ module Spina
 
       def article_params
         params.require(:article).permit(
-          :seo_title,
-          :seo_description,
           :title,
+          :subtitle,
+          :description,
           :body,
           :teaser,
           :author,
