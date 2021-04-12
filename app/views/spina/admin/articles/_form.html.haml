@@ -53,6 +53,11 @@
         = render 'spina/admin/shared/rich_text_field', f: f, field: :body
     .horizontal-form-group
       .horizontal-form-label
+        Category
+      .horizontal-form-content
+        = f.collection_select :spina_category_id, Spina::Category.all, :id, :title, prompt: true
+    .horizontal-form-group
+      .horizontal-form-label
         Image
       .horizontal-form-content
         .page-form-label

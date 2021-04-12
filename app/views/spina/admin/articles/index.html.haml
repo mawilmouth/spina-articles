@@ -17,6 +17,10 @@
       = link_to spina.new_admin_article_path, class: 'button button-primary' do
         = icon('plus')
         =t('spina.articles.new', scaffold_name: t('spina.articles.scaffold_name'))
+    %span
+      = link_to spina.new_admin_category_path, class: 'button button-primary' do
+        = icon('plus')
+        New Category
 
 .well
   - if @articles.any?
