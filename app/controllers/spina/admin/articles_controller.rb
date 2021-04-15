@@ -69,6 +69,7 @@ module Spina
           :author,
           :draft,
           :publish_date,
+          :spina_category_id,
           :slug,
           :image_id
         )

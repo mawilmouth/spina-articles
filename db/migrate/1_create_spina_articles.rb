@@ -9,9 +9,10 @@ class CreateSpinaArticles < ActiveRecord::Migration[5.0]
       t.date :publish_date
       t.string :author
       t.integer :draft, default: true
-      t.timestamps
       t.references :image, foreign_key: { to_table: :spina_images }
-      t.references :spina_category
+      t.references :spina_category, references: :spina_categories, index: true
+      
+      t.timestamps
     end
   end
 end
