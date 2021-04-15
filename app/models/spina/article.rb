@@ -4,7 +4,7 @@ module Spina
     friendly_id :title, use: :slugged
 
     belongs_to :image, optional: true
-    belongs_to :category
+    belongs_to :category, class_name: 'Spina::Category', foreign_key: :spina_category_id
 
     validates :title, :body, :author, :publish_date, presence: true
     validates :slug, uniqueness: true
