@@ -57,7 +57,7 @@ module Spina
       end
 
       def category_params
-        params.require(:category).permit(:title, :description)
+        params.require(:category).permit(:title, :description, :active)
       end
     end
   end
