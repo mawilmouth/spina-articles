@@ -12,6 +12,11 @@
             Description
           %td
             = render 'spina/admin/shared/rich_text_field', f: f, field: :description
+        %tr
+          %td
+            Active?
+          %td
+            = f.check_box :active, data: { switch: true }
 
   %button.button.button-primary{ type: 'submit', data: { icon: 'o' } }
     Save category
